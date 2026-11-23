@@ -40,6 +40,19 @@ def _ensure_deps():
         return
 
     archive = os.path.join(HERE, "vendor.zip")
+    if not os.path.isfile(archive):
+        parts = sorted(
+            os.path.join(HERE, name)
+            for name in os.listdir(HERE)
+            if name.startswith("vendor.zip.") and name[11:].isdigit()
+        )
+        if parts:
+            os.makedirs(cache, exist_ok=True)
+            archive = os.path.join(cache, "_vendor_joined.zip")
+            with open(archive, "wb") as out:
+                for part in parts:
+                    with open(part, "rb") as chunk:
+                        out.write(chunk.read())
     if os.path.isfile(archive):
         os.makedirs(cache, exist_ok=True)
         with zipfile.ZipFile(archive) as zf:
