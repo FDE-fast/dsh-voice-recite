@@ -1,0 +1,7 @@
+# DSH-人声朗诵 bundle patch.
+#
+# `name` is the package name resolved through the profile's node_modules;
+# `id` is the stable loader identity used by diagnostics.
+- insert:
+    - id: dsh-voice-recite
+      name: dsh-voice-recite

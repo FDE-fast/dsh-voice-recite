@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.dsh-recite-*.json
+preview.wav
+preview.mp3
+.DS_Store
+Thumbs.db

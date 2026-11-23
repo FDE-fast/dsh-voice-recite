@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "DSH voice recital",
+    "description": "Turn text into a spoken performance: pick a voice, set the exact duration from start to end time, stretch or modulate a chosen word, and get both WAV and MP3.",
+    "detail": "docs/DETAIL.md"
+  },
+  "dock": {
+    "label": "Recite",
+    "generate": "Generate WAV + MP3",
+    "busy": "Generating…"
+  }
+}

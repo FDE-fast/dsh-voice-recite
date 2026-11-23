@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "DSH-人声朗诵",
+    "description": "把文字变成人声朗诵：选音色、按开始/截止时间定长、指定文字拖音颤音，同时输出 WAV 与 MP3。",
+    "detail": "docs/DETAIL.md"
+  },
+  "dock": {
+    "label": "人声朗诵",
+    "generate": "生成 WAV + MP3",
+    "busy": "正在生成…"
+  }
+}

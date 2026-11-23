@@ -1,0 +1,62 @@
+{
+  "name": "dsh-voice-recite",
+  "version": "1.0.0",
+  "description": "DSH-人声朗诵: a DeepSeek Harness TTS panel with exact duration control, per-word elongation and vibrato, and WAV + MP3 output.",
+  "type": "module",
+  "author": "邓志翔",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FDE-fast/dsh-voice-recite.git"
+  },
+  "homepage": "https://github.com/FDE-fast/dsh-voice-recite",
+  "bugs": {
+    "url": "https://github.com/FDE-fast/dsh-voice-recite/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "edge-tts",
+    "tts",
+    "speech",
+    "voice"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "docs",
+    "icon.svg",
+    "engine",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.12.0",
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.5": "compatible"
+      }
+    }
+  }
+}
